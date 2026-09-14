@@ -14,13 +14,13 @@ const ASSET = "https://cache.e-mongolia.mn/files/portal-v5/images";
 */
 const person = {
   lastName: "Бэсүд",
-  parentName: "Ганбат",
-  firstName: "МӨНХ-ЭРДЭНЭ",
+  parentName: "Болорхүү",
+  firstName: "БАТМЭНД",
   latinLastName: "BESUD",
-  latinParentName: "GANBAT",
-  latinFirstName: "MUNKH-ERDENE",
+  latinParentName: "Bolorkhuu",
+  latinFirstName: "BATMEND",
   sex: "Эрэгтэй",
-  birthDate: "2004/12/24",
+  birthDate: "2004/08/20",
   registerNumber: "658651499738",
   idIssueDate: "2021-01-27",
   idExpiryDate: "2029/12/24",
