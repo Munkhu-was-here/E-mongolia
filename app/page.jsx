@@ -13,17 +13,17 @@ const ASSET = "https://cache.e-mongolia.mn/files/portal-v5/images";
   Edit profile/demo data here.
 */
 const person = {
-  lastName: "Бэсүд",
+  lastName: "Хулч",
   parentName: "Болорхүү",
   firstName: "БАТМЭНД",
-  latinLastName: "BESUD",
+  latinLastName: "Hulch",
   latinParentName: "Bolorkhuu",
   latinFirstName: "BATMEND",
   sex: "Эрэгтэй",
   birthDate: "2004/08/20",
   registerNumber: "658651499738",
-  idIssueDate: "2021-01-27",
-  idExpiryDate: "2029/12/24",
+  idIssueDate: "2021-01-08",
+  idExpiryDate: "2029/08/20",
   email: "658651499738@e-mongolia.mn",
   profilePhoto: "/images/imagepfp.png",
 
