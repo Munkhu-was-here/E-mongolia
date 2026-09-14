@@ -1,0 +1,1265 @@
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #13213a;
+  background: #f7faff;
+}
+button { font: inherit; }
+
+/* ===== TOP STRIP ===== */
+.topbar {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 0 4.8%;
+  background: #fff;
+  border-bottom: 1px solid #edf1f6;
+  color: #334155;
+  font-size: 13px;
+}
+.topspacer { flex: 1; }
+
+/* ===== HEADER ===== */
+.header {
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4.2%;
+  background: #fff;
+  border-bottom: 1px solid #edf1f6;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #0b69ff;
+}
+.officialLogo {
+  width: auto;
+  height: 34px;
+  display: block;
+}
+.demoBadge {
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.headAction {
+  min-width: 48px;
+  border: 0;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  color: #1f2937;
+  font-size: 12px;
+  cursor: pointer;
+}
+.headAction img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+.avatarSmall {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 2px solid #0b69ff;
+  border-radius: 50%;
+  background: #dbeafe;
+  font-weight: 700;
+}
+.circleBtn {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #f4f7fb;
+  color: #0b69ff;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.pageGrid {
+  width: min(1510px, calc(100% - 40px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 32px;
+  padding: 40px 0 60px;
+}
+.sidebar {
+  padding-top: 18px;
+}
+.sideItem {
+  width: 100%;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 10px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: #12223b;
+  text-align: left;
+  font-weight: 600;
+  cursor: pointer;
+}
+.sideItem:hover { background: #edf5ff; }
+.sideItem img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.main { min-width: 0; }
+.main h2 {
+  margin: 0 0 22px;
+  font-size: 22px;
+}
+
+/* ===== ECO BANNER ===== */
+.ecoCard {
+  position: relative;
+  min-height: 220px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #dcecff;
+}
+.ecoLine {
+  position: relative;
+  z-index: 2;
+  padding: 45px 145px 14px;
+  text-align: center;
+  font-size: 15px;
+}
+.ecoLine b { color: #0868ff; }
+.treeImg {
+  position: absolute;
+  bottom: -1px;
+  width: 135px;
+  height: auto;
+  z-index: 1;
+}
+.treeLeft { left: -2px; }
+.treeRight { right: -2px; transform: scaleX(-1); }
+
+.stats {
+  position: relative;
+  z-index: 2;
+  height: 88px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 0;
+  background: #fff;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #e5e7eb;
+}
+.stat:last-child { border-right: 0; }
+.stat > div {
+  color: #0868ff;
+  font-size: 22px;
+  font-weight: 800;
+}
+.stat span {
+  margin-top: 5px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* ===== PROFILE ===== */
+.profileRow {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: -28px;
+  padding: 0 20px;
+}
+.profilePic {
+  width: 110px;
+  height: 110px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border: 6px solid #84c5ff;
+  border-radius: 15px;
+  background: #d9e3ef;
+  color: #64748b;
+  font-weight: 800;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.soyombo {
+  position: absolute;
+  left: 105px;
+  bottom: 0;
+  width: 28px;
+  height: 28px;
+}
+.profileName {
+  color: #0969ff;
+  font-size: 17px;
+  font-weight: 800;
+}
+.profileMail {
+  margin-top: 5px;
+  color: #64748b;
+  font-size: 13px;
+}
+.settings {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 22px;
+  background: #0b69ff;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ===== TABS ===== */
+.tabs {
+  display: flex;
+  align-items: end;
+  gap: 4px;
+  overflow-x: auto;
+  margin-top: 18px;
+  border-bottom: 1px solid #dbe3ef;
+}
+.tabs button {
+  white-space: nowrap;
+  padding: 14px 13px;
+  border: 0;
+  border-radius: 10px 10px 0 0;
+  background: transparent;
+  color: #16233d;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.tabs .activeTab { background: #e5f0ff; }
+
+.refreshBtn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 22px;
+  padding: 8px 14px;
+  border: 1.5px solid #0b69ff;
+  border-radius: 20px;
+  background: #fff;
+  color: #0b69ff;
+  cursor: pointer;
+}
+
+/* ===== DOCUMENTS ===== */
+.documents {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+.officialDocTile {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 14px;
+  background: transparent;
+  cursor: pointer;
+}
+.officialDocTile img {
+  width: 330px;
+  height: 205px;
+  display: block;
+  object-fit: contain;
+  border-radius: 14px;
+  background: #fff;
+}
+.docDemoWatermark {
+  position: absolute;
+  right: 14px;
+  bottom: 10px;
+  padding: 5px 8px;
+  border-radius: 7px;
+  background: rgba(17,24,39,.82);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .15em;
+  pointer-events: none;
+}
+
+/* ===== FLOATING ===== */
+.floating {
+  position: fixed;
+  right: 25px;
+  bottom: 135px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.floating button {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(0,0,0,.12);
+}
+
+/* ===== MODAL ===== */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(75,85,99,.66);
+  backdrop-filter: blur(4px);
+}
+.modal {
+  width: min(520px, 94vw);
+  padding: 22px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 25px 80px rgba(0,0,0,.32);
+}
+.modalHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modalHead h3 {
+  margin: 0;
+  font-size: 17px;
+}
+.xBtn {
+  border: 0;
+  background: transparent;
+  color: #777;
+  cursor: pointer;
+}
+.officialDocLarge {
+  position: relative;
+  width: 100%;
+  padding: 16px 0 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 14px;
+  background: transparent;
+  cursor: pointer;
+}
+.officialDocLarge img {
+  width: 100%;
+  max-height: 285px;
+  display: block;
+  object-fit: contain;
+  border-radius: 14px;
+  background: #fff;
+}
+.modalNote {
+  margin: 24px 0;
+  color: #718096;
+  text-align: center;
+  font-size: 13px;
+}
+.modalActions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+.primaryBtn, .outlineBtn {
+  padding: 10px 24px;
+  border-radius: 22px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.primaryBtn {
+  border: 1px solid #0b69ff;
+  background: #0b69ff;
+  color: #fff;
+}
+.outlineBtn {
+  border: 1px solid #0b69ff;
+  background: #fff;
+  color: #0b69ff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 980px) {
+  .pageGrid {
+    width: min(100% - 28px, 900px);
+    grid-template-columns: 1fr;
+  }
+  .sidebar { display: none; }
+  .topbar { display: none; }
+  .headAction span { display: none; }
+  .ecoLine { padding-left: 90px; padding-right: 90px; }
+}
+
+@media (max-width: 650px) {
+  .header { padding: 0 14px; }
+  .headerActions { gap: 7px; }
+  .headAction:nth-child(-n+4) { display: none; }
+  .officialLogo { height: 30px; }
+  .pageGrid {
+    width: 100%;
+    padding: 22px 14px 40px;
+  }
+  .ecoLine { padding: 30px 45px 12px; }
+  .stat > div { font-size: 17px; }
+  .profileRow { padding: 0; }
+  .profilePic { width: 86px; height: 86px; }
+  .soyombo { left: 75px; }
+  .settings { padding: 9px 12px; }
+  .officialDocTile img {
+    width: min(330px, calc(100vw - 28px));
+    height: auto;
+  }
+}
+
+
+/* ===== V5 editable person object helpers ===== */
+.profilePicWithImage {
+  overflow: hidden;
+}
+.profilePicWithImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.demoInfoPanel {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  width: calc(100% - 42px);
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.88);
+  color: #172033;
+  text-align: left;
+  font-size: 11px;
+  line-height: 1.45;
+  box-shadow: 0 5px 18px rgba(0,0,0,.08);
+  pointer-events: none;
+}
+.demoInfoPanel b {
+  color: #0b69ff;
+}
+
+
+/* ===== V6 modal / document positioning ===== */
+.modalExact {
+  width: min(500px, 94vw);
+  padding: 22px 22px 20px;
+  border-radius: 18px;
+}
+
+.documentStage {
+  position: relative;
+  width: 100%;
+  margin-top: 18px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 14px;
+  background: transparent;
+  cursor: pointer;
+  aspect-ratio: 1.58 / 1;
+}
+
+.documentBase {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+  border-radius: 14px;
+}
+
+.documentPortrait {
+  position: absolute;
+  left: 2.3%;
+  top: 31%;
+  width: 26%;
+  height: 61%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 1px;
+  z-index: 5;
+}
+
+.idText {
+  position: absolute;
+  z-index: 6;
+  text-align: left;
+  color: #111827;
+  line-height: 1.05;
+  pointer-events: none;
+}
+
+.idText span {
+  display: block;
+  margin-bottom: 2px;
+  color: #1764b6;
+  font-size: clamp(7px, .65vw, 9px);
+  font-weight: 600;
+}
+
+.idText b {
+  display: block;
+  color: #111827;
+  font-size: clamp(10px, .95vw, 13px);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.idFamily  { left: 30.5%; top: 22.5%; }
+.idSurname { left: 30.5%; top: 37.5%; }
+.idGiven   { left: 30.5%; top: 49.5%; }
+.idSex     { left: 30.5%; top: 62.2%; }
+.idBirth   { left: 30.5%; top: 73.5%; }
+.idNumber  { left: 30.5%; top: 87.2%; }
+
+.idNumber span {
+  font-size: clamp(6px, .55vw, 8px);
+}
+.idNumber b {
+  font-size: clamp(9px, .8vw, 12px);
+}
+
+.documentStage .docDemoWatermark {
+  right: 12px;
+  bottom: 10px;
+  z-index: 10;
+  opacity: .88;
+}
+
+.modalExact .modalNote {
+  margin: 22px 0 24px;
+}
+
+@media (max-width: 560px) {
+  .modalExact {
+    width: 96vw;
+    padding: 18px;
+  }
+
+  .documentStage {
+    margin-top: 14px;
+  }
+
+  .idText span {
+    font-size: 6px;
+  }
+
+  .idText b {
+    font-size: 9px;
+  }
+
+  .idNumber span {
+    font-size: 5px;
+  }
+
+  .idNumber b {
+    font-size: 8px;
+  }
+}
+
+
+/* ===== V7 document cards: same appearance in grid + modal ===== */
+.docCardButton,
+.documentStageButton {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.documents {
+  align-items: flex-start;
+}
+
+.documentFace {
+  position: relative;
+  width: min(455px, 100%);
+  aspect-ratio: 1.58 / 1;
+  overflow: hidden;
+  border-radius: 14px;
+  background: transparent;
+}
+
+.documentFace.compact {
+  width: 330px;
+}
+
+.documentBase {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+  border-radius: inherit;
+}
+
+/* Identity photo */
+.idPortrait {
+  position: absolute;
+  left: 2.25%;
+  top: 31.5%;
+  width: 26.3%;
+  height: 61.3%;
+  object-fit: cover;
+  object-position: center top;
+  z-index: 4;
+}
+
+/* Only values — no extra blue labels */
+.idValue {
+  position: absolute;
+  z-index: 5;
+  color: #101828;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  font-size: clamp(8px, 1.05vw, 13px);
+  transform-origin: left top;
+}
+
+.idLastName   { left: 30.7%; top: 24.8%; }
+.idParentName { left: 30.7%; top: 39.2%; }
+.idFirstName  { left: 30.7%; top: 51.8%; }
+.idSexValue   { left: 30.7%; top: 64.7%; }
+.idBirthValue { left: 30.7%; top: 78.4%; }
+.idRegValue   { left: 30.7%; top: 91.2%; font-size: clamp(7px, .9vw, 11px); }
+
+/* Passport photo */
+.passportPortrait {
+  position: absolute;
+  left: 2.4%;
+  top: 27.3%;
+  width: 23.5%;
+  height: 59%;
+  object-fit: cover;
+  object-position: center top;
+  z-index: 4;
+}
+
+.passValue {
+  position: absolute;
+  z-index: 5;
+  color: #111827;
+  line-height: 1;
+  white-space: nowrap;
+  font-size: clamp(7px, .92vw, 11px);
+  font-weight: 500;
+}
+
+.passNumber      { left: 73.3%; top: 25.2%; }
+.passType        { left: 30.5%; top: 28.5%; }
+.passCountry     { left: 48.5%; top: 28.5%; }
+.passParent      { left: 30.5%; top: 42.7%; }
+.passName        { left: 30.5%; top: 51.8%; font-weight: 600; }
+.passNationality { left: 30.5%; top: 60.6%; }
+.passBirth       { left: 71.5%; top: 60.6%; }
+.passSex         { left: 71.5%; top: 68.5%; }
+.passIssue       { left: 30.5%; top: 78.5%; }
+.passExpiry      { left: 30.5%; top: 88.2%; }
+.passAuthority   {
+  left: 68%;
+  top: 78.5%;
+  width: 28%;
+  white-space: normal;
+  line-height: 1.05;
+  font-size: clamp(6px, .72vw, 9px);
+}
+
+.documentStageButton {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.documentStageButton .documentFace {
+  width: 100%;
+}
+
+.documentFace .docDemoWatermark {
+  right: 10px;
+  bottom: 8px;
+  z-index: 8;
+}
+
+/* compact cards should keep their text proportional */
+.documentFace.compact .idValue,
+.documentFace.compact .passValue {
+  font-size: 8px;
+}
+.documentFace.compact .idRegValue {
+  font-size: 7px;
+}
+.documentFace.compact .passAuthority {
+  font-size: 6px;
+}
+
+@media (max-width: 760px) {
+  .documents {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .docCardButton {
+    width: 100%;
+  }
+
+  .documentFace.compact {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .modalExact {
+    width: min(96vw, 500px);
+    padding: 16px;
+  }
+
+  .documentStageButton {
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .documentFace.compact {
+    max-width: 100%;
+  }
+
+  .documentFace.compact .idValue,
+  .documentFace.compact .passValue {
+    font-size: 7px;
+  }
+
+  .documentFace.compact .idRegValue {
+    font-size: 6px;
+  }
+
+  .documentFace.compact .passAuthority {
+    font-size: 5px;
+  }
+
+  .modalExact {
+    width: 98vw;
+    padding: 12px;
+  }
+
+  .modalNote {
+    font-size: 12px;
+  }
+
+  .modalActions {
+    gap: 8px;
+  }
+
+  .primaryBtn,
+  .outlineBtn {
+    padding: 9px 14px;
+    font-size: 13px;
+  }
+}
+
+
+/* ===== V8 alignment + Mongolian Cyrillic + back side ===== */
+
+/* Use fonts with complete Mongolian Cyrillic glyph support */
+html, body, button, input, textarea, select {
+  font-family: "Arial Unicode MS", "Segoe UI", Arial, Tahoma, sans-serif !important;
+}
+.profileName,
+.tabs button,
+.sideItem,
+.modalHead h3,
+.idValue,
+.idBackValue,
+.passValue {
+  font-family: "Arial Unicode MS", "Segoe UI", Arial, Tahoma, sans-serif !important;
+}
+
+/* Header profile image */
+.avatarSmall {
+  overflow: hidden;
+  padding: 0;
+  background: #fff;
+}
+.avatarSmall img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Keep trees behind the white statistics strip */
+.ecoCard {
+  isolation: isolate;
+}
+.treeImg {
+  z-index: 0 !important;
+}
+.ecoLine {
+  z-index: 2 !important;
+}
+.stats {
+  z-index: 3 !important;
+  background: #fff !important;
+}
+.profileRow {
+  z-index: 4 !important;
+}
+
+/* Match the 350x220 proportions of the document SVGs exactly */
+.documentFace {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 350 / 220;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.documentBase {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: fill;
+}
+
+.documentFace.compact {
+  width: 390px;
+  max-width: 100%;
+}
+
+/* Main document section alignment */
+.documents {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.docCardButton {
+  line-height: 0;
+  vertical-align: top;
+}
+
+/* Identity front: positions are percentages of the 350x220 SVG */
+.idPortrait {
+  left: 2.2% !important;
+  top: 31.4% !important;
+  width: 26.2% !important;
+  height: 61.0% !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+}
+
+.idValue {
+  line-height: 1 !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+}
+.idLastName   { left: 30.0% !important; top: 25.0% !important; }
+.idParentName { left: 30.0% !important; top: 40.0% !important; }
+.idFirstName  { left: 30.0% !important; top: 52.0% !important; }
+.idSexValue   { left: 30.0% !important; top: 65.0% !important; }
+.idBirthValue { left: 30.0% !important; top: 78.0% !important; }
+.idRegValue   { left: 30.0% !important; top: 90.0% !important; }
+
+/* Identity back: only dynamic values; labels remain in base SVG */
+.idBackValue {
+  position: absolute;
+  z-index: 6;
+  left: 34.4%;
+  color: #101828;
+  line-height: 1;
+  white-space: nowrap;
+  font-size: clamp(8px, .95vw, 12px);
+  font-weight: 500;
+}
+.idIssueDate  { top: 42.2%; }
+.idExpiryDate { top: 54.0%; }
+
+/* Passport photo + values */
+.passportPortrait {
+  left: 2.5% !important;
+  top: 27.0% !important;
+  width: 23.5% !important;
+  height: 59.4% !important;
+}
+.passNumber      { left: 73.0% !important; top: 25.0% !important; }
+.passType        { left: 30.3% !important; top: 28.2% !important; }
+.passCountry     { left: 48.2% !important; top: 28.2% !important; }
+.passParent      { left: 30.3% !important; top: 42.5% !important; }
+.passName        { left: 30.3% !important; top: 51.5% !important; }
+.passNationality { left: 30.3% !important; top: 60.3% !important; }
+.passBirth       { left: 71.2% !important; top: 60.3% !important; }
+.passSex         { left: 71.2% !important; top: 68.2% !important; }
+.passIssue       { left: 30.3% !important; top: 78.2% !important; }
+.passExpiry      { left: 30.3% !important; top: 88.0% !important; }
+.passAuthority   { left: 65.0% !important; top: 78.0% !important; }
+
+/* Modal uses exactly the same face proportions as the cards */
+.documentStageButton .documentFace {
+  width: 100%;
+}
+/* Make popup slightly closer to the reference */
+.modalExact {
+  width: min(540px, 94vw) !important;
+}
+.modalExact .documentStageButton {
+  width: 100%;
+}
+
+/* Responsive: keep cards in bounds without vertical drift */
+@media (max-width: 760px) {
+  .documents {
+    grid-template-columns: none !important;
+    display: flex !important;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .docCardButton {
+    width: 100%;
+    display: block;
+  }
+
+  .documentFace.compact {
+    width: min(100%, 420px) !important;
+    aspect-ratio: 350 / 220 !important;
+  }
+
+  .idValue,
+  .passValue,
+  .idBackValue {
+    font-size: clamp(7px, 2.1vw, 10px) !important;
+  }
+
+  .idRegValue {
+    font-size: clamp(6px, 1.9vw, 9px) !important;
+  }
+
+  .passAuthority {
+    font-size: clamp(5px, 1.55vw, 8px) !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .pageGrid {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .documentFace.compact {
+    width: 100% !important;
+  }
+
+  .modalExact {
+    width: 96vw !important;
+    padding: 12px !important;
+  }
+}
+
+
+/* ===== V9 FINAL passport overlay rules =====
+   Keep this block at the END of globals.css.
+   Edit ONLY these values when tuning passport positions.
+*/
+.documentFace {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.documentBase {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+}
+
+.passportPortrait {
+  display: block !important;
+  position: absolute !important;
+  z-index: 20 !important;
+  left: 2.4% !important;
+  top: 27.3% !important;
+  width: 23.5% !important;
+  height: 59% !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+}
+
+.passValue {
+  display: block !important;
+  position: absolute !important;
+  z-index: 21 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #111827 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  font-size: 9px !important;
+  font-weight: 500 !important;
+}
+
+.passNumber      { left: 70% !important; top: 25.2% !important; }
+.passType        { left: 30.5% !important; top: 24.5% !important; }
+.passCountry     { left: 48.5% !important; top: 24.5% !important; }
+.passParent      { left: 30.5% !important; top: 35.7% !important; }
+.passName        { left: 30.5% !important; top: 45% !important; font-weight: 600 !important; }
+.passNationality { left: 30.5% !important; top: 55.6% !important; }
+.passBirth       { left: 65.5% !important; top: 55.6% !important; }
+.passSex         { left: 65.5% !important; top: 65.5% !important; }
+.passIssue       { left: 30.5% !important; top: 75.5% !important; }
+.passExpiry      { left: 30.5% !important; top: 85.2% !important; }
+
+.passAuthority {
+  left: 62.0% !important;
+  top: 75.0% !important;
+  width: 28% !important;
+  white-space: normal !important;
+  line-height: 1.05 !important;
+  font-size: 8px !important;
+}
+
+/* Ensure overlay remains visible in modal */
+.documentStageButton .passportPortrait,
+.documentStageButton .passValue {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* mobile */
+@media (max-width: 520px) {
+  .passValue { font-size: 7px !important; }
+  .passAuthority { font-size: 6px !important; }
+}
+
+
+/* ===== V10 FINAL FIXES ===== */
+
+/* Force both trees in front of the white statistic strip */
+.ecoCard {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+}
+
+.ecoCard .treeImg {
+  position: absolute !important;
+  z-index: 50 !important;
+  pointer-events: none !important;
+}
+
+.ecoCard .treeLeft {
+  left: -2px !important;
+  bottom: -1px !important;
+}
+
+.ecoCard .treeRight {
+  right: -2px !important;
+  bottom: -1px !important;
+  transform: scaleX(-1) !important;
+}
+
+.ecoCard .ecoLine {
+  position: relative !important;
+  z-index: 5 !important;
+}
+
+.ecoCard .stats {
+  position: relative !important;
+  z-index: 10 !important;
+  background: #fff !important;
+}
+
+/*
+  The trees must be above the stats background.
+  This second selector wins over every earlier rule in the file.
+*/
+.ecoCard > .treeImg {
+  z-index: 60 !important;
+}
+
+/* Passport Personal No. */
+.passPersonal {
+  left: 30.5% !important;
+  top: 66.3% !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 25 !important;
+}
+
+/* Keep passport values above the SVG base everywhere */
+.documentFace .passValue,
+.documentStageButton .passValue {
+  z-index: 25 !important;
+}
+
+/* Mobile scaling */
+@media (max-width: 520px) {
+  .passPersonal {
+    font-size: 7px !important;
+  }
+}
+
+
+/* ===== V11 FINAL ID CARD TEXT SIZE + BACK VALUES ===== */
+
+/* Front-side ID values: slightly larger and clearer */
+.documentFace .idValue,
+.documentStageButton .idValue {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 25 !important;
+  font-size: 13px !important;
+  line-height: 1 !important;
+  font-weight: 500 !important;
+}
+
+/* Registration number is long, so keep it just a little smaller */
+.documentFace .idRegValue,
+.documentStageButton .idRegValue {
+  font-size: 9px !important;
+}
+
+/* Back-side dynamic values */
+.documentFace .idBackValue,
+.documentStageButton .idBackValue {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 25 !important;
+  font-size: 11px !important;
+  line-height: 1 !important;
+  font-weight: 500 !important;
+}
+
+/* Align the two editable dates with the printed labels on the back */
+.idIssueDate {
+  left: 34.4% !important;
+  top: 42.2% !important;
+}
+
+.idExpiryDate {
+  left: 34.4% !important;
+  top: 54.0% !important;
+}
+
+/* Passport values: slightly larger too */
+.documentFace .passValue,
+.documentStageButton .passValue {
+  font-size: 10px !important;
+}
+
+.documentFace .passAuthority,
+.documentStageButton .passAuthority {
+  font-size: 8px !important;
+}
+
+/* Normal small document cards need proportional text */
+.documentFace.compact .idValue {
+  font-size: 9px !important;
+}
+.documentFace.compact .idRegValue {
+  font-size: 7px !important;
+}
+.documentFace.compact .idBackValue {
+  font-size: 9px !important;
+}
+.documentFace.compact .passValue {
+  font-size: 9px !important;
+}
+.documentFace.compact .passAuthority {
+  font-size: 7px !important;
+}
+
+/* Phone */
+@media (max-width: 520px) {
+  .documentFace .idValue,
+  .documentStageButton .idValue,
+  .documentFace .idBackValue,
+  .documentStageButton .idBackValue {
+    font-size: 8px !important;
+  }
+
+  .documentFace .idRegValue,
+  .documentStageButton .idRegValue {
+    font-size: 7px !important;
+  }
+
+  .documentFace .passValue,
+  .documentStageButton .passValue {
+    font-size: 8px !important;
+  }
+
+  .documentFace .passAuthority,
+  .documentStageButton .passAuthority {
+    font-size: 6px !important;
+  }
+}
+/* ===== NORMAL PAGE DOCUMENT TEXT FIX ===== */
+
+/* ID card - үндсэн хуудсан дээр */
+.documentFace.compact .idValue {
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+}
+
+.documentFace.compact .idRegValue {
+  font-size: 8px !important;
+}
+
+/* Passport - үндсэн хуудсан дээр */
+.documentFace.compact .passValue {
+  font-size: 10px !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+}
+
+.documentFace.compact .passAuthority {
+  font-size: 7px !important;
+  line-height: 1.05 !important;
+}
